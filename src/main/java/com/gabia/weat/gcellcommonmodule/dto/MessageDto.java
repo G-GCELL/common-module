@@ -60,6 +60,7 @@ public class MessageDto {
 
 	public record CsvUpdateRequestMsgDto(
 		String fileLocate,
+		String email,
 		YearMonth deleteTarget
 	) {
 
