@@ -2,7 +2,6 @@ package com.gabia.weat.gcellcommonmodule.dto.format;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.event.Level;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.gabia.weat.gcellcommonmodule.dto.format.ApiLogFormatDto.ApiLogFormatDtoBuilder;
@@ -10,11 +9,13 @@ import com.gabia.weat.gcellcommonmodule.dto.format.ErrorLogFormatDto.ErrorLogFor
 import com.gabia.weat.gcellcommonmodule.dto.format.MessageBrokerLogFormatDto.MessageBrokerLogFormatDtoBuilder;
 import com.gabia.weat.gcellcommonmodule.dto.format.TimerLogFormatDto.TimerLogFormatDtoBuilder;
 
+import lombok.RequiredArgsConstructor;
+
 @Component
+@RequiredArgsConstructor
 public class LogFormatFactory {
 
-	@Value("${server.name}")
-	private String serverName;
+	private final String serverName;
 	private final int TRACE_ID_LENGTH = 7;
 	private ThreadLocal<String> traceInfoHolder = new ThreadLocal<>();
 
