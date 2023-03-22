@@ -29,7 +29,7 @@ public class LogAspect {
 	private final LogFormatFactory logFormatFactory;
 	private final LogPrinter logPrinter;
 
-	@Around("@annotation(org.springframework.web.bind.annotation.RestController)")
+	@Around("@annotation(com.gabia.weat.gcellcommonmodule.annotation.ControllerLog)")
 	public Object apiLogAdvisor(ProceedingJoinPoint joinPoint) throws Throwable {
 		logFormatFactory.startTrace();
 		long startTime = System.currentTimeMillis();
