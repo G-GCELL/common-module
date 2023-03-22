@@ -49,6 +49,7 @@ public class MessageDto {
 
 	}
 
+	@Builder
 	public record FileCreateErrorMsgDto(
 		Long memberId,
 		Long excelInfoId,
