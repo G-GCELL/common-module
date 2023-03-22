@@ -33,7 +33,8 @@ public enum ErrorCode {
 	MINIO_DOWNLOAD_FAIL(null,CustomStatus.MINIO_DOWNLOAD_FAIL , "파일 다운로드에 실패하였습니다."),
 	INVALID_CSV_HEADER(null,CustomStatus.INVALID_CSV_HEADER,"CSV 파일 헤더가 올바르지 않습니다."),
 	INVALID_CSV_FORMAT(null,CustomStatus.INVALID_CSV_FORMAT, "CSV 파일 형식이 올바르지 않습니다."),
-	MAIL_SEND_FAIL(null,CustomStatus.MAIL_SEND_FAIL, "메일 전송에 실패하였습니다.");
+	MAIL_SEND_FAIL(null,CustomStatus.MAIL_SEND_FAIL, "메일 전송에 실패하였습니다."),
+	RESULT_COUNT_EXCEED(null,CustomStatus.RESULT_COUNT_EXCEED, "요청 결과가 150만 건을 초과하였습니다.");
 
 	private final HttpStatus status;
 	private final CustomStatus customStatus;

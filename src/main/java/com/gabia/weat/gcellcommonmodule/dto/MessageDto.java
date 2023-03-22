@@ -31,6 +31,7 @@ public class MessageDto {
 
 	}
 
+	@Builder
 	public record FileCreateProgressMsgDto(
 		Long memberId,
 		Long excelInfoId,
