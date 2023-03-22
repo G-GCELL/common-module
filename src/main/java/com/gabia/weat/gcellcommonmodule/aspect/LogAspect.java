@@ -29,7 +29,7 @@ public class LogAspect {
 	private final LogFormatFactory logFormatFactory;
 	private final LogPrinter logPrinter;
 
-	@Around("@target(com.gabia.weat.gcellcommonmodule.annotation.ControllerLog)")
+	@Around("@within(com.gabia.weat.gcellcommonmodule.annotation.ControllerLog)")
 	public Object apiLogAdvisor(ProceedingJoinPoint joinPoint) throws Throwable {
 		logFormatFactory.startTrace();
 		long startTime = System.currentTimeMillis();
